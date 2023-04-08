@@ -7,9 +7,9 @@ import colors from "../constants/colors";
 
 import { useSelector } from "react-redux";
 
-// import BeerHad from "../components/BeerHad";
+import BeerHad from "../components/BeerHad";
 import { beersSelect } from "../redux/reducers/beers";
-// import Input from "../components/Input";
+import Input from "../components/Input";
 const { width } = Dimensions.get("window");
 
 const Amount = ({ navigation }) => {
@@ -45,17 +45,17 @@ const Amount = ({ navigation }) => {
       />
       <View style={styles.mainView}>
         <ScrollView>
-          {/* {beers.map((beer, index) => (
+          {beers.map((beer, index) => (
             <BeerHad
               key={index}
               noOfBeers={beer.noOfBeers}
               title={beer.name}
               onPress={() => onItemPress(beer)}
             />
-          ))} */}
+          ))}
         </ScrollView>
 
-        {/* <Input
+        <Input
           value={noOfBeers}
           disable={true}
           style={{ marginTop: 10 }}
@@ -66,7 +66,7 @@ const Amount = ({ navigation }) => {
           placeholder="Amount of calories:"
           value={amountOfCalories !== "NaN" ? amountOfCalories : "0"}
           disable={true}
-        /> */}
+        />
       </View>
     </SafeAreaView>
   );
