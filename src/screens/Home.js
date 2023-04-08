@@ -96,5 +96,6 @@ const styles = StyleSheet.create({
   },
   mainView: {
     paddingHorizontal: width * 0.025,
+    flex: 1,
   },
 });
