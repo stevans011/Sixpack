@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
-// import Favorites from "../screens/Favorites";
+import Favorites from "../screens/Favorites";
 import Home from "../screens/Home";
 import { Dimensions, Platform } from "react-native";
 import { Image, Text, View } from "react-native";
 import images from "../assets/images";
 import colors from "../constants/colors";
-// import Amount from "../screens/Amount";
+import Amount from "../screens/Amount";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -35,7 +35,7 @@ const NavigationBottom = () => {
           ),
         }}
       />
-      {/* <BottomTab.Screen
+      <BottomTab.Screen
         name="Calculate"
         component={Amount}
         options={{
@@ -43,8 +43,8 @@ const NavigationBottom = () => {
             <TabImage focused={focused} name="Amount" icon={images.SUGAR} />
           ),
         }}
-      /> */}
-      {/* <BottomTab.Screen
+      />
+      <BottomTab.Screen
         name="Favorites"
         component={Favorites}
         options={{
@@ -52,7 +52,7 @@ const NavigationBottom = () => {
             <TabImage focused={focused} name="Favorites" icon={images.STAR} />
           ),
         }}
-      /> */}
+      />
     </BottomTab.Navigator>
   );
 };
