@@ -1,7 +1,7 @@
 import { StyleSheet, useColorScheme, Text } from "react-native";
 // import NavigationStack from "./src/navigation/NavigationStack";
 import { Provider } from "react-redux";
-// import { store } from "./src/redux/store";
+import { store } from "./src/redux/store";
 import Toast from "react-native-toast-message";
 import { StatusBar } from "react-native";
 
@@ -14,8 +14,10 @@ export default function App() {
         backgroundColor="transparent"
         barStyle={colorScheme === "dark" ? "light-content" : "dark-content"}
       />
-      {/* <Provider store={store}><NavigationStack /></Provider> */}
-      <Text>Welcome to Cross App</Text>
+      <Provider store={store}>
+        {/* <NavigationStack /> */}
+        <Text>Redux Configured</Text>
+      </Provider>
       <Toast />
     </>
   );
