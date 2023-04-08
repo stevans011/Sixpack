@@ -1,5 +1,5 @@
 import { StyleSheet, useColorScheme, Text } from "react-native";
-// import NavigationStack from "./src/navigation/NavigationStack";
+import NavigationStack from "./src/navigation/NavigationStack";
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";
 import Toast from "react-native-toast-message";
@@ -15,8 +15,7 @@ export default function App() {
         barStyle={colorScheme === "dark" ? "light-content" : "dark-content"}
       />
       <Provider store={store}>
-        {/* <NavigationStack /> */}
-        <Text>Redux Configured</Text>
+        <NavigationStack />
       </Provider>
       <Toast />
     </>
