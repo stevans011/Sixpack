@@ -10,7 +10,7 @@ import SignInScreen from "../screens/SignIn";
 import { useSelector } from "react-redux";
 import { userSelect } from "../redux/reducers/user";
 import Home from "../screens/Home";
-// import NavigationBottom from "./NavigationBottom";
+import NavigationBottom from "./NavigationBottom";
 // import Favorites from "../screens/Favorites";
 // import Beer from "../screens/Beer";
 
@@ -31,8 +31,8 @@ const SignInStack = () => (
     }}
   >
     <Stack.Screen name="Home" component={Home} />
-    {/* <Stack.Screen name="Favorites" component={Favorites} />
     <Stack.Screen name="BottomTab" component={NavigationBottom} />
+    {/* <Stack.Screen name="Favorites" component={Favorites} />
     <Stack.Screen name="Beer" component={Beer} /> */}
   </Stack.Navigator>
 );

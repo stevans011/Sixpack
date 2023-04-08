@@ -1,6 +1,6 @@
 import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-// import Header from "../components/Header";
+import Header from "../components/Header";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Item from "../components/Item";
 import colors from "../constants/colors";
@@ -10,9 +10,9 @@ import { logout } from "../redux/reducers/user";
 import { auth, db } from "../config/Config";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { collection, doc, getDoc, setDoc } from "firebase/firestore";
-// import ItemPlaceholder from "../components/ItemPlaceholder";
+import ItemPlaceholder from "../components/ItemPlaceholder";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 
 const { width, height } = Dimensions.get("window");
 
@@ -51,7 +51,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Header
+      <Header
         title="SixPack"
         headingStyle={{
           color: colors.WHITE,
@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
             onPress={handleSignOut}
           />
         }
-      /> */}
+      />
       <View style={styles.mainView}>
         <ScrollView>
           {beers
@@ -80,8 +80,7 @@ const Home = ({ navigation }) => {
                   }}
                 />
               ))
-            : // : [1, 2, 3, 4].map((item) => <ItemPlaceholder key={item} />)}
-              [1, 2, 3, 4].map((item) => <View />)}
+            : [1, 2, 3, 4].map((item) => <ItemPlaceholder key={item} />)}
         </ScrollView>
       </View>
     </SafeAreaView>
